@@ -30,6 +30,7 @@ class BlogController extends Controller
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
+        $blog->pfp = $request->pfp;
         $blog->save();
         return response()->json($blog, 201);
     }
@@ -58,6 +59,7 @@ class BlogController extends Controller
     {
         $blog->title = $request->title;
         $blog->content = $request->content;
+        $blog->pfp = $request->pfp;
         $blog->save();
         return response()->json($blog);
     }
