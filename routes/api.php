@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BlogController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\Api\BlogController;
 |
 */
 Route::apiResource('blogs', BlogController::class);
+Route::apiResource('users', UserController::class);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
